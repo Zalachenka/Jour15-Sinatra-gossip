@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 		erb :new_gossip #lets you create a new instance
 	end
 	post '/gossips/new/' do
-  	Gossip.new(params["gossip_author"],params["gossip_content"]).save #lets you create a new gossip with name and content chosen
+  	Gossip.new(params["gossip_author"],params["gossip_content"]).save #lets you create a new gossip with name and content chosen, brings you back to the home page when done
   	redirect '/'
 	end
 	get '/gossips/:id' do
